@@ -1,0 +1,120 @@
+/*filter
+//Exemplo: obter os números pares de um array
+const nums = [1, 2, 3, 4, 5, 6];
+
+//Filter:
+const pares = nums.filter(n => n % 2 === 0);
+console.log(pares);
+*/
+
+
+/*Callback:
+function digaOla(nome) {
+    console.log("Olá, " + nome)
+}
+
+function executar(callback) {
+    callback("Ana")
+}
+
+executar(digaOla);
+*/
+
+/*
+const idades = [15, 20, 25, 12];
+// const maiores = idades.filter(function(i) {return i >= 18;})
+// const maiores = idades.filter((i) => {return i >= 18})
+//const maiores = idade.filter(i => i >= 18)
+console.log(maiores);
+*/
+
+/*
+const produtos = [
+    {id: 1, nome: "Camiseta", preco: 30, promocao: false},
+    {id: 2, nome: "Caneca", preco: 15, promocao: true},
+    {id: 3, nome: "Boné", preco: 25, promocao: true}
+];
+
+//Filtrar apenas os produtos em promoção
+
+const emPromocao = produtos.filter(p => p.promocao === true)
+console.log(emPromocao)
+*/
+
+//////////////////////////////////////////////////////////////////////////////
+
+/*Map
+const nums = [1, 2, 3, 4];
+
+//map cria um novo array com o resultado da função aplicada a cada item
+const dobrados = nums.map(n => n * 2);
+console.log(dobrados);
+*/
+
+/*
+const alunos = [
+    {nome: "Ana", nota: 8},
+    {nome: "Bruno", nota: 6},
+];
+const nomes = alunos.map(a => `${a.nome}`)
+const comAprovacao = alunos.map(a => ({...a, aprovado: a.nota >= 7}));
+
+console.log(nomes)
+*/
+
+/*Find - busca o primeiro elemento que satisfaz a condição e retorna esse elemento
+
+const ns = [3, 7, 4, 9];
+const primeiroPar = ns.find(n => n % 2 === 0);
+
+console.log(primeiroPar)
+*/
+
+/*
+const produtos = [
+    {id: 1, nome: "Camiseta"},
+    {id: 2, nome: "Caneca"}
+]
+
+const p = produtos.find(p => p.id === 2);
+
+console.log(p);
+*/
+
+/*Reduce - reduz o array a um único valor (número, objeto, array...)
+
+const nums = [10, 20, 5];
+const soma = nums.reduce((acc, cur) => acc + cur, 0)
+console.log(soma)
+*/
+
+/*
+const itens = [
+    {nome: "Caneta", categoria: "Papelaria", preco: 3},
+    {nome: "Caderno", categoria: "Papelaria", preco: 15},
+    {nome: "Maçã", categoria: "Alimentos", preco: 2}
+]
+
+const totalPorCategoria = itens.reduce((acc, it) => {
+    const cat = it.categoria; 
+    if (!acc[cat]) acc[cat] = 0;
+    acc[cat] += it.preco;
+    return acc; 
+
+}, {});
+
+console.log(totalPorCategoria);
+*/
+
+/*
+const compras = [
+    {nome: "Leite", preco: 5},
+    {nome: "Pão", preco: 8},
+    {nome: "Manteiga", preco: 12}
+]
+const valorTotal = compras.reduce((acumulador, itemAtual) => {
+    return acumulador + itemAtual.preco
+}, 0)
+
+console.log(valorTotal);
+*/
